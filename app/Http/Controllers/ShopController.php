@@ -34,12 +34,8 @@ class ShopController extends Controller
 
 
         $validator = Validator::make($request->all(), [
-            'user_name' => 'required',
-            'user_phone' => 'required',
-            'user_email' => 'required',
-            'user_nid' => 'required',
             'shop_name' => 'required',
-            'user_password' => 'required|min:4',
+            'image' => 'required',
             // 'confirm_user_password' => 'required|same:user_password'
         ]);
         if ($validator->fails()) {
@@ -47,70 +43,19 @@ class ShopController extends Controller
             return back()->with('failed', $validator->errors());
         }
 
-
-        //return $request->all();
-
         if ($request->hasFile('image')) {
-            /*  $this->validate($request, [
-                  'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:3048',
-              ]);*/
             $image = $request->file('image');
             $image_name = time() . '.' . $image->getClientOriginalExtension();
             $destinationPath = public_path('/images/shop');
             $image->move($destinationPath, $image_name);
-            $request->request->add(['trade_licence' => '/images/shop/' . $image_name]);
+            $request->request->add(['shop_image' => '/images/shop/' . $image_name]);
 
         }
 
-        if ($request->hasFile('user_image')) {
-            $uimage = $request->file('user_image');
-            $user_image_name = time() . '.' . $uimage->getClientOriginalExtension();
-            $destinationPath = public_path('/users');
-            $uimage->move($destinationPath, $user_image_name);
-
-            $request['profile_pic'] = $user_image_name;
-        }
-        unset($request['_token']);
-        unset($request['image']);
-        unset($request['user_image']);
-
-
-        // return $request->except(['_token', 'image']);
         try {
 
-            $shopUser = [
-                'name' => $request['user_name'],
-                'phone' => $request['user_phone'],
-                'email' => $request['user_email'],
-                'nid' => $request['user_nid'],
-                'dob' => $request['user_dob'],
-                'user_type' => 2,
-                'password' => Hash::make($request['user_password']),
-                'profile_pic' => $request['profile_pic'],
+            Shop::create($request->except('_token','image'));
 
-            ];
-            $r = $user_id = User::insertGetId($shopUser);
-
-            $shop = [
-                'shop_name' => $request['shop_name'],
-                'shop_phone' => $request['shop_phone'],
-                'shop_email' => $request['shop_email'],
-                'shop_address' => $request['shop_address'],
-                'shop_details' => $request['shop_details'],
-                'commission_rate' => $request['commission_rate'],
-                'trade_licence' => $request['trade_licence'],
-                'shop_image' => $request['shop_image'],
-                'user_id' => $r,
-
-            ];
-            $shop_id = Shop::insertGetId($shop);
-
-            $shopOperator = [
-                'shop_id' => $shop_id,
-                'user_id' => $user_id,
-                'user_type' => 1,
-            ];
-            ShopOperator::create($shopOperator);
             return back()->with('success', "Successfully Created");
         } catch (Exception $exception) {
             return back()->with('failed', $exception->getMessage());

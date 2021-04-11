@@ -14,7 +14,7 @@
                     ng-change="changeParentCategory()">
                 @foreach (getMainType() as $res)
                     <option
-                        value="{{ $res->parent_category_id}}">{{ $res->parent_category_name_en}}</option>
+                        value="{{ $res->parent_category_id}}"  >{{ $res->parent_category_name_en}}</option>
                 @endforeach
 
             </select>
@@ -35,41 +35,6 @@
             </div>
 
         </div>
-        <div class="form-group">
-            <div class="form-group">
-                <label class="control-label">Sub-category <span
-                        class="text-danger">*</span></label>
-                <select class="form-control " name="sub_category_id"
-                        ng-model="sub_category_id" required>
-
-                    <option ng-repeat="category in sub_category_list"
-                            value="@{{ category.sub_category_id }}">@{{
-                        category.sub_category_name_en }}
-                    </option>
-
-                </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="price">Size
-
-                <span class="">
-                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-                                    data-target="#size">+new</button>
-                    </span>
-
-            </label>
-            <select class="select2 form-control select2-multiple" name="product_size[]"
-                    multiple="multiple" multiple data-placeholder="Choose ...">
-                <optgroup label="Size">
-                    @foreach (getSize() as $size)
-                        <option value="{{ $size->size_id}}">{{$size->size_name}}</option>
-                    @endforeach
-                </optgroup>
-
-            </select>
-        </div>
-
 
     </div>
     <div class="col-sm-6">
@@ -94,125 +59,63 @@
                 </select>
             </div>
             <div class="col-md-6">
-                <label for="price">Brand Name
+                <label for="price">Size
 
                     <span class="">
                             <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
-                                    data-target="#brand">+new</button>
+                                    data-target="#size">+new</button>
                     </span>
 
                 </label>
-                <select class="select2 form-control select2-multiple"
-
-                        name="brand_id" data-placeholder="Choose ...">
-                    <option value=""> None</option>
-                    @foreach (getBrand() as $res)
-                        <option
-                            value="{{ $res->brand_id}}">{{ $res->brand_name}}</option>
-                    @endforeach
+                <select class="select2 form-control select2-multiple" name="product_size[]"
+                        multiple="multiple" multiple data-placeholder="Choose ...">
+                    <optgroup label="Size">
+                        @foreach (getSize() as $size)
+                            <option value="{{ $size->size_id}}">{{$size->size_name}}</option>
+                        @endforeach
+                    </optgroup>
 
                 </select>
             </div>
+
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="control-label">Shop<span class="text-danger">*</span></label>
 
 
-                    @if(Auth::user()->user_type!=1)
-                        <select class="form-control" name="shop_id">
-                            <option
-                                value="{{ \Illuminate\Support\Facades\Session::get('shop_id')}}">{{getShopNameFromId( \Illuminate\Support\Facades\Session::get('shop_id'))}}</option>
-                        </select>
-                    @else
-                        <select class="form-control select2" name="shop_id">
-                            @foreach($shops as $shop)
-                                <option value="{{$shop->shop_id}}">{{$shop->shop_name}}</option>
-                            @endforeach
+                    <select class="form-control select2" name="shop_id">
+                        @foreach($shops as $shop)
+                            <option value="{{$shop->shop_id}}">{{$shop->shop_name}}</option>
+                        @endforeach
 
-                        </select>
-                    @endif
+                    </select>
+
 
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <label for="manufacturerbrand">Stock Status<span class="text-danger">*</span>
-                </label>
-                <select class="form-control " name="stock_status">
-                    @foreach (getStockStatus() as $key => $value)
-                        <option value="{{ $key}}"
-                                @if($key==1)selected @endif>{{$value}}</option>
-                    @endforeach
 
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="manufacturerbrand">Display category<span
-                        class="text-danger">*</span> </label>
-                <select class="form-control " name="product_type">
-
-                    @foreach (gettingProductType() as $key => $value)
-                        <option value="{{ $key}}">{{$value}}</option>
-                    @endforeach
-
-                </select>
-
-            </div>
             <div class="col-md-6">
                 <label for="price">Regular Price<span class="text-danger">*</span></label>
                 <input id="price" name="regular_price" type="number" ng-model="regular_price"
-                       class="form-control"
+                       class="form-control" value="{{old('regular_price')}}"
                        required>
 
             </div>
             <div class="col-md-6">
                 <label for="price">Discount Rate<span class="text-danger">*</span></label>
                 <input id="price" name="discount_rate" type="text" ng-model="discount_rate"
-                       ng-change="discountRate()" class="form-control"
+                       ng-change="discountRate()" class="form-control" value="{{old('discount_rate')}}"
                        required>
 
             </div>
             <div class="col-md-6">
                 <label for="price">Selling Price<span class="text-danger">*</span></label>
                 <input id="price" name="selling_price" ng-model="selling_price" type="number"
-                       class="form-control"
+                       class="form-control" value="{{old('selling_price')}}"
                        readonly required>
 
             </div>
-            <div class="col-md-6">
-                <label for="qr_code">Qr Code</label>
-                <input id="qr_code" name="qr_code" type="text"
-                       class="form-control" >
-
-            </div>
-            {{--    <div class="col-md-6">
-                    <label for="manufacturerbrand">Order Quantity<span class="text-danger">*</span>
-                    </label>
-                    <input id="quantity" name="minimum_order_quantity" type="number"
-                           class="form-control"
-                           required>
-
-                </div>--}}
-           {{-- <div class="col-md-6">
-                <label data-toggle="tooltip" data-placement="top" title="{{getDeliveryChargeText()}}">Delivery
-                    Charge<span
-                        class="text-danger">*</span></label>
-                <input type="number" name="delivery_charge" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label data-toggle="tooltip" data-placement="top" title="{{getDeliverableQuantityText()}}">Deliverable
-                    Quantity<span
-                        class="text-danger">*</span>
-                </label>
-                <input type="number" name="deliverable_quantity" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label data-toggle="tooltip" data-placement="top" title="{{getExtraDeliveryChargeText()}}">Extra
-                    Delivery Charge<span
-                        class="text-danger">*</span>
-                </label>
-                <input type="number" name="extra_delivery_charge" class="form-control" required>
-            </div>--}}
 
         </div>
     </div>
@@ -223,7 +126,7 @@
             <label for="productdesc">Product Description<span
                     class="text-danger">*</span></label>
             <textarea id="elm1" class="form-control summernote"
-                      name="product_details" required></textarea>
+                      name="product_details" >{{old('product_details')}}</textarea>
         </div>
     </div>
     <div class="col-md-6">
@@ -231,7 +134,7 @@
             <label for="productdesc">Product Specification<span
                     class="text-danger">*</span></label>
             <textarea class="form-control summernote" id="productdesc"
-                      name="product_specification" required>
+                      name="product_specification" >{{old('product_details')}}
                                     </textarea>
         </div>
 
@@ -239,31 +142,7 @@
 
 
 </div>
-<div class="row">
-    <div class="col-sm-4">
 
-        <div class="form-group">
-            <label for="productdesc">Meta Title</label>
-            <textarea class="form-control" id="productdesc" name="meta_title"
-                      rows="5"></textarea>
-        </div>
-    </div>
-    <div class="col-sm-4">
-
-        <div class="form-group">
-            <label for="productdesc">Meta Keywords</label>
-            <textarea class="form-control" id="productdesc" name="meta_keywords"
-                      rows="5"></textarea>
-        </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="form-group">
-            <label for="productdesc">Meta Description</label>
-            <textarea class="form-control" id="productdesc" name="meta_description"
-                      rows="5"></textarea>
-        </div>
-    </div>
-</div>
 <div class="row">
     <div class="col-md-6">
         <label for="product_color">Featured Image<span class="text-danger">*</span></label>
@@ -272,10 +151,10 @@
     <div class="col-md-6">
         <div class="input-group mt-4">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon3">Youtube Link :</span>
+                <span class="input-group-text" id="basic-addon3">Product Url Link<span class="text-danger">*</span> : </span>
             </div>
-            <input type="text" class="form-control" name="video" id="video"
-                   aria-describedby="basic-addon3">
+            <input type="text" class="form-control" name="product_url" value="{{old('product_url')}}"
+                   aria-describedby="basic-addon3" required>
         </div>
     </div>
 

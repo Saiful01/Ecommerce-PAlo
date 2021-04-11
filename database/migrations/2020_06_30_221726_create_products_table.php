@@ -49,6 +49,7 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('category_id')->nullable();
             $table->unsignedBigInteger('sub_category_id')->nullable();
             $table->string('video')->nullable();
+            $table->string('product_url')->nullable();
 
             $table->double('delivery_charge')->default(0);
             $table->integer('deliverable_quantity')->default(1);

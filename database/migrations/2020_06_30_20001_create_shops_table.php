@@ -28,7 +28,7 @@ class CreateShopsTable extends Migration
             $table->string('shop_type')->nullable();
             $table->double('commission_rate')->default(0);
             $table->unsignedBigInteger('user_id')->default(1);
-            $table->boolean('is_active')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

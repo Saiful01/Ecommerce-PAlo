@@ -48,11 +48,7 @@
                         <tr>
                             <th>#</th>
                             <th>Shop Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Trade Licence</th>
-                            <th>Commission Rate</th>
-                            <th>Address</th>
+                            <th>Shop Image</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -68,21 +64,12 @@
                             <tr>
                                 <td>{{$i++}}</td>
                                 <td>{{$result->shop_name}}</td>
-                                <td>{{$result->shop_phone}}</td>
-                                <td>{{$result->shop_email}}</td>
                                 <td>
-                                    <a target="_blank" href="{{$result->trade_licence}}">
-                                        <img src="{{$result->trade_licence}}" alt="Trade License" style="width:100px">
+                                    <a target="_blank" href="{{$result->shop_image}}">
+                                        <img src="{{$result->shop_image}}" alt="Shop Image" style="width:100px">
                                     </a>
                                 </td>
-                                <td>{{$result->commission_rate}}%
-                                    <!-- Button trigger modal -->
-                                    <span class="ml-3">  <button type="button" class="btn btn-sm btn-primary"
-                                                                 data-toggle="modal" data-target="#shop{{$result->shop_id}}">
-                                        Edit
-                                    </button> </span>
-                                </td>
-                                <td>{{$result->shop_address}}</td>
+
                                 <td>
                                     @if($result->is_active)
                                         <span class="badge badge-success">Active</span>
@@ -111,51 +98,11 @@
                                                    href="/admin/shop/update-status/{{$result->shop_id}}/{{1}}">Activate</a>
                                             @endif
 
-
-                                            <a class="dropdown-item"
-                                               href="/admin/shop/order/{{$result->shop_id}}">Order Details</a>
-                                            <a class="dropdown-item"
-                                               href="/admin/shop/payment-details/{{$result->shop_id}}">Payment
-                                                Details</a>
-                                            <a class="dropdown-item"
-                                               href="/admin/shop-details/{{$result->shop_id}}">Shop
-                                                Details</a>
                                         </div>
                                     </div>
 
                                 </td>
                             </tr>
-                            <!-- Modal -->
-                            <div class="modal fade" id="shop{{$result->shop_id}}" tabindex="-1" role="dialog"
-                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="{{$result->shop_id}}">Commission Rate</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <form method="post" action="/admin/commission-rate/update">
-                                            <div class="modal-body">
-
-                                                <input class="form-control" type="text" name="commission_rate"
-                                                       value="{{$result->commission_rate}}">
-                                                <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                                <input type="hidden" name="shop_id" value="{{$result->shop_id}}">
-
-
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                                    Close
-                                                </button>
-                                                <button type="submit" class="btn btn-primary">Save changes</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
 
 
                         @endforeach

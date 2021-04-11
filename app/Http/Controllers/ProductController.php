@@ -46,23 +46,23 @@ class ProductController extends Controller
         //return $request->all();
         unset($request['_token']);
         $validator = Validator::make($request->all(), [
-            /*'shop_id' => 'required',*/
+            'shop_id' => 'required',
             'product_name' => 'required',
             'parent_category_id' => 'required',
             'category_id' => 'required',
-            'sub_category_id' => 'required',
+            /*'sub_category_id' => 'required',*/
             'discount_rate' => 'required',
             'regular_price' => 'required',
             'selling_price' => 'required',
-            'qr_code' => 'required',
-            'product_details' => 'required',
-            'product_specification' => 'required',
+            'product_url' => 'required',
+            /*'qr_code' => 'required',*/
+            /*'product_details' => 'required',
+            'product_specification' => 'required',*/
             'featured' => 'required',
         ]);
-        $request['shop_id']=1;
 
         if ($validator->fails()) {
-            return back()->with('failed', "There is an error. Please input all field properly.");
+            return back()->withErrors($validator)->withInput();
         }
         /* Youtube Video Format*/
         if ($request['video'] != null) {
@@ -114,8 +114,6 @@ class ProductController extends Controller
             }
             return back()->with('success', "Successfully Product Saved");
         } catch (Exception $exception) {
-            //return $exception->getMessage();
-            return back()->with('failed', "There is an error. Please input all field properly.");
             return back()->with('failed', $exception->getMessage());
         }
 
@@ -266,21 +264,23 @@ class ProductController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            /*  'shop_id' => 'required',*/
+            'shop_id' => 'required',
             'product_name' => 'required',
-            'parent_category_id' => 'required|numeric',
-            'category_id' => 'required|numeric',
-            'sub_category_id' => 'required|numeric',
+            'parent_category_id' => 'required',
+            'category_id' => 'required',
+            /*'sub_category_id' => 'required',*/
             'discount_rate' => 'required',
             'regular_price' => 'required',
             'selling_price' => 'required',
-            'qr_code' => 'required',
-            'product_details' => 'required',
-            'product_specification' => 'required',
+            'product_url' => 'required',
+            /*'qr_code' => 'required',*/
+         /*   'product_details' => 'required',
+            'product_specification' => 'required',*/
+            'featured' => 'required',
         ]);
 
         if ($validator->fails()) {
-            return back()->with('failed', "There is an error. Please input all field properly.");
+            return back()->withErrors($validator)->withInput();
         }
 
         //return $request->all();

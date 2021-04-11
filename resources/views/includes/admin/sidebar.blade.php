@@ -45,8 +45,8 @@
                             <li><a href="/admin/parent-category/show">View Parent Category</a></li>
                             <li><a href="/admin/category/create">New Category</a></li>
                             <li><a href="/admin/category/show">View Category</a></li>
-                            <li><a href="/admin/sub-category/create">New Sub Category</a></li>
-                            <li><a href="/admin/sub-category/show">View Sub Category</a></li>
+                          {{--  <li><a href="/admin/sub-category/create">New Sub Category</a></li>
+                            <li><a href="/admin/sub-category/show">View Sub Category</a></li>--}}
                         @endif
                     </ul>
                 </li>
@@ -74,31 +74,31 @@
                         </a>
                     </li>--}}
 
-                    <li>
+                {{--    <li>
                         <a href="javascript: void(0);" class="has-arrow waves-effect">
                             <i class="bx bx-list-check"></i>
                             <span>Report</span>
                         </a>
                         <ul class="sub-menu" aria-expanded="false">
                             <li><a href="/admin/report/show">Commission Report</a></li>
-                         {{--   <li><a href="#">View Product</a></li>--}}
+                         --}}{{--   <li><a href="#">View Product</a></li>--}}{{--
 
                         </ul>
-                    </li>
+                    </li>--}}
 
 
-                   {{-- <li>
+                    <li>
                         <a href="/admin/shop/show" class=" waves-effect">
                             <i class="bx bx-store"></i>
                             <span>Manage Shop</span>
                         </a>
-                    </li>--}}
-                    <li>
-                        <a href="/admin/brand/show" class=" waves-effect">
+                    </li>
+                    <a href="/admin/brand/show" class=" waves-effect">
+               {{--     <li>
                             <i class="bx bx-store"></i>
                             <span>Manage Brand</span>
                         </a>
-                    </li>
+                    </li>--}}
                     <li>
                         <a href="/admin/size/show" class=" waves-effect">
                             <i class="bx bx-store"></i>
@@ -126,22 +126,22 @@
 
 
 
-                    <li class="menu-title">User</li>
+                  {{--  <li class="menu-title">User</li>
 
                     <li>
                         <a href="/admin/customer/show" class=" waves-effect">
                             <i class="bx bx-user"></i>
                             <span>Manage Customers</span>
                         </a>
-                    </li>
+                    </li>--}}
                 @endif
 
-                <li>
+        {{--        <li>
                     <a href="/admin/user/show" class=" waves-effect">
                         <i class="bx bx-store"></i>
                         <span>Manage User</span>
                     </a>
-                </li>
+                </li>--}}
                 {{--     <li>
                          <a href="/admin/hat/show" class=" waves-effect">
                              <i class="bx bx-user"></i>
@@ -149,7 +149,7 @@
                          </a>
                      </li>--}}
 
-                @if(\Illuminate\Support\Facades\Auth::user()->user_type==1)
+            {{--    @if(\Illuminate\Support\Facades\Auth::user()->user_type==1)
                     <li class="menu-title">Settings</li>
                     <li>
                         <a href="/admin/coupon/show" class=" waves-effect">
@@ -160,7 +160,7 @@
 
 
 
-                @endif
+                @endif--}}
                 {{-- <li>
                     <a href="/admin/user/show" class=" waves-effect">
                         <i class="bx bx-store"></i>
@@ -180,12 +180,12 @@
                         <span>Video Tutorial</span>
                     </a>
                 </li>
-                <li>
+            {{--    <li>
                     <a href="/admin/app/setting" class=" waves-effect">
                         <i class="bx bx-wrench"></i>
                         <span>App Setting</span>
                     </a>
-                </li>
+                </li>--}}
 
                 <li>
                     <a href="/admin/profile" class=" waves-effect">
@@ -202,7 +202,7 @@
                 </li>
 
 
-                @if(\Illuminate\Support\Facades\Auth::user()->user_type==1)
+          {{--      @if(\Illuminate\Support\Facades\Auth::user()->user_type==1)
                     <li class="menu-title">Delivery</li>
                     <li>
                         <a href="/admin/delivery-charge/create/" class=" waves-effect">
@@ -213,7 +213,7 @@
 
 
 
-                @endif
+                @endif--}}
 
             </ul>
         </div>
