@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Show Video Tutorial')
+@section('title', 'Show News')
 
 @section('content')
 
@@ -8,12 +8,12 @@
     <div class="row">
         <div class="col-12">
             <div class="page-title-box d-flex align-items-center justify-content-between">
-                <h4 class="mb-0 font-size-18">Video Tutorial</h4>
+                <h4 class="mb-0 font-size-18">News</h4>
 
                 <div class="page-title-right">
                     <ol class="breadcrumb m-0">
                         <li class="breadcrumb-item"><a href="/admin/dashboard">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Video Tutorial</li>
+                        <li class="breadcrumb-item active">News</li>
                     </ol>
                 </div>
 
@@ -32,8 +32,8 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="card-title">Video Tutorial Info <span><button type="button" class="btn btn-sm btn-primary"
-                                                                                     data-toggle="modal" data-target="#video">
+                            <h4 class="card-title">News Info <span><button type="button" class="btn btn-sm btn-primary"
+                                                                           data-toggle="modal" data-target="#video">
                                         +new
                                     </button></span>
                             </h4>
@@ -49,8 +49,7 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Video Name</th>
-                            <th>Link</th>
+                            <th>News Title</th>
                             <th>View</th>
                             <th>Edit</th>
                             <th>Delete</th>
@@ -64,13 +63,12 @@
 
                             <tr>
                                 <td>{{$i++}}</td>
-                                <td>{{$result->name}}</td>
-                                <td>{{$result->link}}</td>
-                                <td><a target="_blank" href="{{$result->link}}">View</a></td>
+                                <td>{{$result->news_title}}</td>
+                                <td><a target="_blank" href="{{$result->news_link}}">View</a></td>
                                 <td>
                                     <!-- Button trigger modal -->
-                                    <span >  <button type="button" class="btn btn-sm btn-primary"
-                                                                 data-toggle="modal" data-target="#shop{{$result->video_id}}">
+                                    <span>  <button type="button" class="btn btn-sm btn-primary"
+                                                    data-toggle="modal" data-target="#shop{{$result->news_id}}">
                                         Edit
                                     </button> </span>
                                 </td>
@@ -82,32 +80,33 @@
                                         </button>
                                         <div class="dropdown-menu" style="">
                                             <a class="dropdown-item"
-                                               href="/admin/video/delete/{{$result->video_id}}">Delete</a>
+                                               href="/admin/news/delete/{{$result->news_id}}">Delete</a>
                                         </div>
                                     </div>
 
                                 </td>
                             </tr>
                             <!-- Modal -->
-                            <div class="modal fade" id="shop{{$result->video_id}}" tabindex="-1" role="dialog"
+                            <div class="modal fade" id="shop{{$result->news_id}}" tabindex="-1" role="dialog"
                                  aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="{{$result->video_id}}">Video Edit</h5>
+                                            <h5 class="modal-title" id="{{$result->news_id}}">News Edit</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
-                                        <form method="post" action="/admin/video/update">
+                                        <form method="post" action="/admin/news/update" enctype="multipart/form-data">
                                             <div class="modal-body">
 
-                                                <input class="form-control" type="text" name="name"
-                                                       value="{{$result->name}}">
-                                                <input class="form-control mt-3" type="text" name="link"
-                                                       value="{{$result->link}}" required>
+                                                <input class="form-control" type="text" name="news_title"
+                                                       value="{{$result->news_title}}">
+                                                <input class="form-control mt-3" type="text" name="news_link"
+                                                       value="{{$result->news_link}}" required>
+                                                <input class="form-control mt-3" type="file" name="image">
                                                 <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                                <input type="hidden" name="video_id" value="{{$result->video_id}}">
+                                                <input type="hidden" name="news_id" value="{{$result->news_id}}">
 
 
                                             </div>
@@ -137,18 +136,19 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="video">Video Tutorial Create</h5>
+                    <h5 class="modal-title" id="video">News Create</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form method="post" action="/admin/video/store">
+                <form method="post" action="/admin/news/store" enctype="multipart/form-data">
                     <div class="modal-body">
 
-                        <input class="form-control" type="text" name="name"
-                               placeholder="Video Name">
-                        <input class="form-control mt-3" type="text" name="link"
-                               placeholder="Video Link">
+                        <input class="form-control" type="text" name="news_title"
+                               placeholder="News Title">
+                        <input class="form-control mt-3" type="text" name="news_link"
+                               placeholder="News Link">
+                        <input class="form-control mt-3" type="file" name="image">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                     </div>

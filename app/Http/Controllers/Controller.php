@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use App\ParentCategory;
 use App\Product;
 use App\ProductCategory;
 use App\PromotionalSlider;
+use App\Shop;
 use App\Slider;
 use App\SubCategory;
+use App\Video;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -20,7 +23,7 @@ class Controller extends BaseController
     public function home()
     {
 
-        $new_products = Product::orderBy('products.product_id', 'DESC')->where('products.is_active', true)/*->limit(6)*/ ->get();
+        $new_products = Product::orderBy('products.product_id', 'DESC')->where('products.is_active', true)->limit(8) ->get();
         $featured_products = Product::orderBy('products.product_id', 'DESC')
             ->where('products.is_active', true)
             ->where('products.is_featured', true)
@@ -34,6 +37,9 @@ class Controller extends BaseController
                 $sub_category->sub_categories = SubCategory::where('category_id', $sub_category->category_id)->get();
             }
         }
+        $shops = Shop::get();
+        $news = News::get();
+        $videos = Video::get();
 
         //return $popular_categories;
 
@@ -46,14 +52,32 @@ class Controller extends BaseController
 
         return view('common.home.index')
             ->with('sliders', $sliders)
+            ->with('shops', $shops)
+            ->with('news', $news)
+            ->with('videos', $videos)
             ->with('full_banner', $full_banner)
-            ->with('full_banner', $full_banner)
+            ->with('half_banner', $half_banner)
             ->with('best_deals', $best_deals)
             ->with('popular_categories', $popular_categories)
             ->with('new_products', $new_products)
             ->with('promotions', $promotions)
             ->with('featured_products', $featured_products);
 
+    }
+    public function shopProducts($id, $name)
+    {
+        $popular_categories = ParentCategory::limit(9)->get();
+        foreach ($popular_categories as $item) {
+             $item->categories = ProductCategory::where('parent_category_id', $item->parent_category_id)->get();
+        }
+        $products = Product::orderBy('products.product_id', 'DESC')
+            ->where('products.shop_id', $id)
+            ->get();
+
+        return view('common.shop_products.index')
+            ->with('name', $name)
+            ->with('popular_categories', $popular_categories)
+            ->with('products', $products);
     }
 
 
@@ -107,6 +131,7 @@ class Controller extends BaseController
     {
         return view('common.404');
     }
+
 
     public function cart()
     {

@@ -37,14 +37,20 @@
 
     <!-- Main CSS File -->
     <link rel="stylesheet" type="text/css" href="/cassets/css/demo2.min.css">
+    <style>
+        .header-top {
+            border-bottom: 0px;
+        }
+
+    </style>
 </head>
 
 <body class="home">
 
 <div class="page-wrapper">
     <h1 class="d-none">Online Fashion Fair 2021</h1>
-    <header class="header">
-        <div class="header-top">
+    <header class="header" style="background-color:#FDB700">
+        {{--<div class="header-top" style="background-color:#FDB700">
             <div class="container">
                 <div class="header-left">
                     <p class="welcome-msg">Welcome to Online Fashion Fair 2021!</p>
@@ -63,8 +69,8 @@
                 </div>
             </div>
         </div>
-        <!-- End HeaderTop -->
-        <div class="header-middle sticky-header fix-top sticky-content">
+        <!-- End HeaderTop -->--}}
+        <div class="header-middle sticky-header fix-top sticky-content" style="background-color:#FDB700">
             <div class="container">
                 <div class="header-left">
                     <a href="#" class="mobile-menu-toggle">
@@ -97,16 +103,16 @@
                         </div>
                     </a>
                     <span class="divider"></span>
-                   {{-- <a href="wishlist.html" class="wishlist">
-                        <i class="d-icon-heart"></i>
-                    </a>--}}
+                    {{-- <a href="wishlist.html" class="wishlist">
+                         <i class="d-icon-heart"></i>
+                     </a>--}}
                     <span class="divider"></span>
                     <div class="dropdown cart-dropdown type2 mr-0 mr-lg-2">
                         <a href="#" class="cart-toggle label-block link">
-                          {{--  <div class="cart-label d-lg-show">
-                                <span class="cart-name">Shopping Cart:</span>
-                                <span class="cart-price">$0.00</span>
-                            </div>--}}
+                            {{--  <div class="cart-label d-lg-show">
+                                  <span class="cart-name">Shopping Cart:</span>
+                                  <span class="cart-price">$0.00</span>
+                              </div>--}}
                             <i class="d-icon-bag"><span class="cart-count"></span></i>
                         </a>
                     {{--    <div class="dropdown-box">
@@ -164,7 +170,7 @@
                             </div>
                             <!-- End of Cart Action -->
                         </div>--}}
-                        <!-- End Dropdown Box -->
+                    <!-- End Dropdown Box -->
                     </div>
                     <div class="header-search hs-toggle mobile-search">
                         <a href="#" class="search-toggle">
@@ -184,7 +190,7 @@
 
         </div>
 
-        <div class="header-bottom d-lg-show">
+        <div class="header-bottom d-lg-show" style="background-color:#FDB700">
             <div class="container">
                 <div class="header-left">
                     <nav class="main-nav">
@@ -252,14 +258,13 @@
                 </div>
                 <div class="header-right">
                     <a href="#"><i class="d-icon-card"></i>Special Offers</a>
-                    <a href="https://d-themes.com/buynow/riodehtml" target="_blank" class="ml-6">Buy Riode!</a>
                 </div>
             </div>
         </div>
     </header>
     <!-- End Header -->
 
-    <main class="main demo2-cls">
+    <main class="main demo2-cls mt-3">
         <div class="page-content">
             <div class="container">
                 @yield('content')

@@ -70,15 +70,15 @@ class SliderSeeder extends Seeder
 
         PromotionalSlider::create([
             'section_id' => 3,
-            'slider_image' => "/images/promotional_slider/4.jpg",
-            'slider_mobile_image' => "/images/promotional_slider/4.jpg",
+            'slider_image' => "/images/promotional_slider/pro1.gif",
+            'slider_mobile_image' => "/images/promotional_slider/pro1.gif",
             'slider_title' => "Welcome to Mart Venue"
         ]);
 
         PromotionalSlider::create([
             'section_id' => 3,
-            'slider_image' => "/images/promotional_slider/5.jpg",
-            'slider_mobile_image' => "/images/promotional_slider/5.jpg",
+            'slider_image' => "/images/promotional_slider/pro1.gif",
+            'slider_mobile_image' => "/images/promotional_slider/pro1.gif",
             'slider_title' => "Welcome to Mart Venue"
         ]);
 

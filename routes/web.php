@@ -174,11 +174,16 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/user/edit/{id}', 'UserController@edit');
     Route::post('/admin/user/update', 'UserController@update');
 
-    //Manage User
+    //Manage video
     Route::get('/admin/video/show', 'VideoController@show');
     Route::post('/admin/video/store', 'VideoController@store');
     Route::get('/admin/video/delete/{id}', 'VideoController@destroy');
     Route::post('/admin/video/update', 'VideoController@update');
+    //Manage News
+    Route::get('/admin/news/show', 'NewsController@show');
+    Route::post('/admin/news/store', 'NewsController@store');
+    Route::get('/admin/news/delete/{id}', 'NewsController@destroy');
+    Route::post('/admin/news/update', 'NewsController@update');
 
     //Manage Delivery charge
     Route::get('/admin/delivery-charge/create', 'DeliveryChargeController@create');

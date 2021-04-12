@@ -1,22 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2fb43f78-8b4a-4dfc-9b92-3ffee63f508d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/news/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/brand.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/news.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/promotions.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/slider.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/video.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/shop_products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_30_20001_create_shops_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_30_20001_create_shops_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_06_30_221726_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_06_30_221726_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/view.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/shop/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shop/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/shop/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shop/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/shop/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/shop/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ShopSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ShopSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/SliderSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SliderSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cassets/css/demo2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/cassets/css/demo2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/video/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/video/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/common/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/product/edit_retail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/product/edit_retail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/product/retail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/product/retail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/common.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/common.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,6 +194,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Saiful\Ecommerce-PAlo\resources\views\admin\news" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -185,21 +214,41 @@
       <option name="presentableId" value="Default" />
       <updated>1618146515854</updated>
       <workItem from="1618146518058" duration="2283000" />
-      <workItem from="1618149107378" duration="5929000" />
+      <workItem from="1618149107378" duration="7480000" />
+      <workItem from="1618207686465" duration="13696000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1618171156808">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618212649002">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618171156808" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618170475941">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618212649002" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1618227092982">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618170475941" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618227092982" />
+    <state x="389" y="82" width="587" height="564" key="find.popup" timestamp="1618216384701">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="82" width="587" height="564" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1618216384701" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618227939940">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618227939940" />
   </component>
 </project>
