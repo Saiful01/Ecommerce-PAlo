@@ -4,14 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Riode - Ultimate eCommerce Template</title>
+    <title>@yield('title')</title>
 
-    <meta name="keywords" content="HTML5 Template"/>
-    <meta name="description" content="Riode - Ultimate eCommerce Template">
-    <meta name="author" content="D-THEMES">
+    <meta name="keywords" content=""/>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/cassets/images/icons/favicon.png">
+    <link rel="icon" type="image/png" href="/images/logo.png">
+
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+
+
+
 
     <script>
         WebFontConfig = {
@@ -48,13 +57,16 @@
             color: #222;
             background: #FDB700;
         }
-        .menu li:hover>a:not(.menu-title), .menu .active>a:not(.menu-title) {
+
+        .menu li:hover > a:not(.menu-title), .menu .active > a:not(.menu-title) {
             color: #fff;
         }
+
         .header-search.hs-simple input.form-control {
             border-color: #ececec;
 
         }
+
         .sticky-header.fixed {
             background: #FDB700;
         }
@@ -96,7 +108,8 @@
                     <span class="divider"></span>
                     <a href="contact-us.html" class="contact d-lg-show"><i class="d-icon-map"></i>Contact</a>
                     <a href="#" class="help d-lg-show"><i class="d-icon-info"></i> Need Help</a>
-                    <a class="login-link" href="ajax/login.html" data-toggle="login-modal"><i class="d-icon-user"></i>Sign in</a>
+                    <a class="login-link" href="ajax/login.html" data-toggle="login-modal"><i class="d-icon-user"></i>Sign
+                        in</a>
                     <span class="delimiter">/</span>
                     <a class="register-link ml-0" href="ajax/login.html" data-toggle="login-modal">Register</a>
                     <!-- End of Login -->
@@ -207,7 +220,8 @@
                             <i class="d-icon-search"></i>
                         </a>
                         <form action="#" class="input-wrapper">
-                            <input type="text" class="form-control" name="search" autocomplete="off" placeholder="Search your keyword..." required="">
+                            <input type="text" class="form-control" name="search" autocomplete="off"
+                                   placeholder="Search your keyword..." required="">
                             <button class="btn btn-search" type="submit">
                                 <i class="d-icon-search"></i>
                             </button>

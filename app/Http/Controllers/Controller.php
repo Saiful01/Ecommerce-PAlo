@@ -131,7 +131,8 @@ class Controller extends BaseController
     }
     public function shopProducts()
     {
-        return view('common.categories.index');
+        $products=Product::get();
+        return view('common.categories.index')->with('products', $products);
     }
 
 }
