@@ -6,6 +6,7 @@ use App\ParentCategory;
 use App\Product;
 use App\ProductCategory;
 use App\PromotionalSlider;
+use App\Shop;
 use App\Slider;
 use App\SubCategory;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -43,16 +44,15 @@ class Controller extends BaseController
         $full_banner = PromotionalSlider::where('section_id', 2)->orderBy('created_at', 'DESC')->first();
         $half_banner = PromotionalSlider::where('section_id', 3)->limit(2)->orderBy('created_at', 'DESC')->get();
 
+        $shops=Shop::get();
+        $news=[];
+
 
         return view('common.home.index')
             ->with('sliders', $sliders)
-            ->with('full_banner', $full_banner)
-            ->with('full_banner', $full_banner)
-            ->with('best_deals', $best_deals)
-            ->with('popular_categories', $popular_categories)
-            ->with('new_products', $new_products)
-            ->with('promotions', $promotions)
-            ->with('featured_products', $featured_products);
+            ->with('shops', $shops)
+            ->with('news', $news)
+            ->with('new_products', $new_products);
 
     }
 
@@ -128,6 +128,10 @@ class Controller extends BaseController
     public function about()
     {
         return view('common.404');
+    }
+    public function shopProducts()
+    {
+        return view('common.categories.index');
     }
 
 }

@@ -201,6 +201,10 @@ Route::group(['middleware' => 'admin'], function () {
 /*Public Area started here*/
 
 Route::get('/', 'Controller@home');
+Route::any('/shop/{id}/{name}', 'Controller@shopProducts');
+Route::get('/product/{id}/{name}', 'Controller@details');
+
+
 Route::get('/error', 'Controller@error');
 Route::get('/cart', 'Controller@cart');
 Route::get('/checkout', 'Controller@checkout');
@@ -210,7 +214,7 @@ Route::get('/shops', 'Controller@shops');
 Route::get('/delivery', 'Controller@delivery');
 Route::get('/secure-payment', 'Controller@securePayment');
 Route::post('/contact/store', 'ContactController@store');
-Route::get('/product/{id}/{name}', 'Controller@details');
+
 
 Route::get('/parent-categories/{id}/{name}', 'Controller@parentaCategoryProduct');
 Route::get('/categories/{id}/{name}', 'Controller@categoryProduct');
@@ -229,7 +233,7 @@ Route::any('/order-return-policy', 'Controller@returnPolicy');
 
 
 
-Route::any('/shop/{id}/{name}', 'Controller@shopProducts');
+
 
 /*Public Area ended here*/
 

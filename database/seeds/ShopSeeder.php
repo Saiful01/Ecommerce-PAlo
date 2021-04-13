@@ -13,15 +13,30 @@ class ShopSeeder extends Seeder
      */
     public function run()
     {
-        Shop::create([
-            'shop_name' => "Firebox",
-            'shop_phone' => "01825435612",
-            'shop_email' => "abc@gmail.com",
-            'user_id' => 2,
-            'shop_image' => "/images/shop/1.png"
-        ]);
+        for ($i = 1; $i <= 12; $i++) {
+            Shop::create([
+                'shop_name' => "Firebox",
+                'shop_phone' => "01825435612" . $i,
+                'shop_email' => "abc@gmail.com" . $i,
+                'user_id' => 2,
+                'shop_image' => "/images/shop/1.jpg"
+            ]);
+            Shop::create([
+                'shop_name' => "Firebox",
+                'shop_phone' => "01825435612" . $i,
+                'shop_email' => "abc@gmail.com" . $i,
+                'user_id' => 2,
+                'shop_image' => "/images/shop/2.png"
+            ]);
+            Shop::create([
+                'shop_name' => "Firebox",
+                'shop_phone' => "01825435612" . $i,
+                'shop_email' => "abc@gmail.com" . $i,
+                'user_id' => 2,
+                'shop_image' => "/images/shop/3.jpg"
+            ]);
 
-
+        }
 
 
         ShopOperator::create([
@@ -29,7 +44,6 @@ class ShopSeeder extends Seeder
             'shop_id' => 1,
             'user_type' => 1,
         ]);
-
 
 
         //Voucher
