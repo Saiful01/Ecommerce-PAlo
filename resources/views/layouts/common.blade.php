@@ -43,6 +43,7 @@
     <link rel="stylesheet" type="text/css" href="/cassets/vendor/owl-carousel/owl.carousel.min.css">
 
     <!-- Main CSS File -->
+
     <link rel="stylesheet" type="text/css" href="/cassets/css/demo1.min.css">
     <link rel="stylesheet" type="text/css" href="/cassets/css/style.min.css">
 
@@ -70,6 +71,7 @@
         .sticky-header.fixed {
             background: #FDB700;
         }
+
     </style>
 </head>
 
@@ -77,9 +79,11 @@
 
 <div class="page-wrapper">
 
+
     <header class="header">
 
         <div class="header-top">
+
             <div class="container">
                 <div class="header-left">
                     <p class="welcome-msg">Welcome to Riode store message or remove it!</p>
@@ -116,8 +120,8 @@
                 </div>
             </div>
         </div>
-        <!-- End HeaderTop -->
-        <div class="header-middle sticky-header fix-top sticky-content">
+        <!-- End HeaderTop -->--}}
+        <div class="header-middle sticky-header fix-top sticky-content" style="background-color:#FDB700">
             <div class="container">
                 <div class="header-left">
                     <a href="#" class="mobile-menu-toggle">
@@ -150,6 +154,7 @@
                         </div>
                     </a>
 
+
                     <span class="divider"></span>
                     <div class="dropdown cart-dropdown type2 mr-0 mr-lg-2">
                         <a href="#" class="cart-toggle label-block link">
@@ -158,6 +163,7 @@
                                 <span class="cart-price">$0.00</span>
                             </div>
                             <i class="d-icon-bag"><span class="cart-count">2</span></i>
+
                         </a>
                         <!-- End Cart Toggle -->
                         <div class="dropdown-box">
@@ -212,8 +218,10 @@
                                 <a href="checkout.html" class="btn btn-dark"><span>Go To Checkout</span></a>
                             </div>
                             <!-- End of Cart Action -->
+
                         </div>
                         <!-- End Dropdown Box -->
+
                     </div>
                     <div class="header-search hs-toggle mobile-search">
                         <a href="#" class="search-toggle">
@@ -232,7 +240,7 @@
             </div>
         </div>
 
-        <div class="header-bottom d-lg-show">
+        <div class="header-bottom d-lg-show" style="background-color:#FDB700">
             <div class="container">
                 <div class="header-left">
                     <nav class="main-nav">
@@ -254,7 +262,9 @@
     </header>
     <!-- End Header -->
 
+
 @yield('content')
+
 
 <!-- End of Main -->
     <footer class="footer">

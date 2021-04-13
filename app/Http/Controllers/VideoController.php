@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class VideoController extends Controller
 {
@@ -35,6 +36,17 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'link' => 'required',
+
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator);
+        }
+        if ($request['link'] != null) {
+            $request['link'] = getYoutubeVideoLink($request['link']);
+        }
         try {
             Video::create($request->all());
             return back()->with('success',"Successfully Saved");

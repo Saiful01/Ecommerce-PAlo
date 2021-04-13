@@ -177,7 +177,13 @@
                 <li>
                     <a href="/admin/video/show" class=" waves-effect">
                         <i class="bx bx-wrench"></i>
-                        <span>Video Tutorial</span>
+                        <span>Video </span>
+                    </a>
+                </li>
+                        <li>
+                    <a href="/admin/news/show" class=" waves-effect">
+                        <i class="bx bx-wrench"></i>
+                        <span>News </span>
                     </a>
                 </li>
             {{--    <li>

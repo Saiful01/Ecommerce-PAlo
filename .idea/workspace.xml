@@ -1,12 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2fb43f78-8b4a-4dfc-9b92-3ffee63f508d" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/common/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/common/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/common/product/single_product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/product/single_product.blade.php" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/news/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/brand.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/news.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/promotions.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/slider.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/home/video.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/common/shop_products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ShopController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ShopSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ShopSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/SliderSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/SliderSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/libs/bootstrap-datepicker/css/bootstrap-datepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cassets/css/demo2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/cassets/css/demo2.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/video/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/video/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/admin/sidebar.blade.php" afterDir="false" />
+>>>>>>> 57211ede7e380a5cec9c4a807448c16dd03e5395
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/common.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/common.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,9 +212,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="D:\Workstation\PHP Workstation\Ecommerce-PAlo\resources\views\common\product" />
       <recent name="D:\Workstation\PHP Workstation\Ecommerce-PAlo\resources\views\common\categories" />
       <recent name="D:\Workstation\PHP Workstation\Ecommerce-PAlo" />
+=======
+      <recent name="D:\Saiful\Ecommerce-PAlo\resources\views\admin\news" />
+>>>>>>> 57211ede7e380a5cec9c4a807448c16dd03e5395
     </key>
   </component>
   <component name="RunManager">
@@ -191,8 +236,13 @@
       <option name="presentableId" value="Default" />
       <updated>1618146515854</updated>
       <workItem from="1618146518058" duration="2283000" />
+<<<<<<< HEAD
       <workItem from="1618149107378" duration="5929000" />
       <workItem from="1618281169193" duration="6986000" />
+=======
+      <workItem from="1618149107378" duration="7480000" />
+      <workItem from="1618207686465" duration="13696000" />
+>>>>>>> 57211ede7e380a5cec9c4a807448c16dd03e5395
     </task>
     <servers />
   </component>
@@ -209,5 +259,26 @@
         </entry>
       </map>
     </option>
+<<<<<<< HEAD
+=======
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618212649002">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1618212649002" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1618227092982">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1618227092982" />
+    <state x="389" y="82" width="587" height="564" key="find.popup" timestamp="1618216384701">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="389" y="82" width="587" height="564" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1618216384701" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1618227939940">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1618227939940" />
+>>>>>>> 57211ede7e380a5cec9c4a807448c16dd03e5395
   </component>
 </project>

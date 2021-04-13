@@ -146,22 +146,19 @@ class ShopController extends Controller
 
     public function update(Request $request)
     {
-        unset($request['_token']);
-        // return $request->all();
-        /*
-                 $shop = [
-                    'shop_name' => $request['shop_name'],
-                    'shop_phone' => $request['shop_phone'],
-                    'shop_email' => $request['shop_email'],
-                    'shop_address' => $request['shop_address'],
-                    'shop_details' => $request['shop_details'],
-                    'shop_details' => $request['shop_details'],
-                    'commission_rate' => $request['commission_rate'],
-                    'trade_licence' => $request['trade_licence'],
-                ];*/
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $image_name = time() . '.' . $image->getClientOriginalExtension();
+            $destinationPath = public_path('/images/shop');
+            $image->move($destinationPath, $image_name);
+            $request->request->add(['shop_image' => '/images/shop/' . $image_name]);
+
+        }
+
 
         try {
-            Shop::where('shop_id', $request['shop_id'])->update($request->all());
+            Shop::where('shop_id', $request['shop_id'])->update($request->except('_token','image'));
             //User::where('id', $request['user_id'])->update($shopUser);
             return back()->with('success', "Successfully Updated");
 
